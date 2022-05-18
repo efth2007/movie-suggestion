@@ -5,15 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <style>
+        h1 {color:red;};
+        #app {background-color: blue;}
+      </style>
     <title>What should I watch?</title>
 </head>
 <body>
-    <div id="frame">
-    <div id="app" style="width:200px">
+    <div id="app" >
+        <!-- <button v-on:click="getPicture()">Change background</button> -->
+    <div id="user-frame">
+        <!-- <div id="app" style="width:200px"> -->
         <h2>User Profile </h2></br>
         <img :src="picture" />
-        <h1>{{firstName}} {{lastName}}</h1>
-        <button v-on:click="getUser()">Next Profile...</button>
+        <h1>{{title}} {{firstName}} {{lastName}}</h1>
+        <div id="info">email: {{email}}</br>
+        phone: {{phone}}
+        </div>
+        <button v-on:click="getUser()">Next Profile</button>
     </div>
 </div>
     <script src="https://unpkg.com/vue@3"></script>
